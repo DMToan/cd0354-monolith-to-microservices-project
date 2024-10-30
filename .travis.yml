@@ -13,6 +13,7 @@ before_script:
 
 script:
   - docker-compose -f docker-compose-build.yaml build
+
   - docker tag udagram-frontend 1512582/udagram-frontend:latest
   - docker tag udagram-api-feed 1512582/udagram-api-feed:latest
   - docker tag udagram-api-user 1512582/udagram-api-user:latest
@@ -20,6 +21,7 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  
   - docker push 1512582/udagram-frontend
   - docker push 1512582/udagram-api-feed
   - docker push 1512582/udagram-api-user
