@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 data:
-  AWS_BUCKET: udagram-268379069136-dev
+  AWS_BUCKET: project3-268379069136-de
   AWS_PROFILE: default
   AWS_REGION: us-west-2
   JWT_SECRET: testing
